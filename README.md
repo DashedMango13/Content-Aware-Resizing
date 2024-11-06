@@ -6,7 +6,7 @@ Seam Carving for Content-Aware Image Resizing
 ACM Transactions on Graphics, Vol. 26, No. 3, Article 10, Publication date: July 2007.
 
 External Libraries For Compiling:
-Boost 1_86
+Boost 1_86, 
 OpenCV 4.10.0
 
 # Run caResize.exe in Command Prompt "-h" to see options:
