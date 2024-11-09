@@ -51,6 +51,8 @@ No dependencies are required to run the fully functional standalone executable
 7. Run "caResize-standalone" and pass your image as an argument with "-v" to understand the images original properties. '-i' does not need to be written to input the image, it is default.
    ```bash
    caResize-standalone inputImage.png -v
+ ![inputImage](https://github.com/user-attachments/assets/d9b45ae2-6989-4997-ac5b-f59bfcd10727)
+
 8. Use '-x' and '-y' to achieve a target width and height for your image.
    ```bash
    caResize-standalone inputImage.png -x 750 -y 250
@@ -61,5 +63,5 @@ No dependencies are required to run the fully functional standalone executable
    ```bash
    caResize-standalone inputImage.png -r
 11. Use '-k' sparingly to outline an area of the image that should remain unchanged when necessary.
-  ```bash
-   caResize-standalone inputImage.png -x 750 -y 250 -o ultrawide.png
+    ```bash
+    caResize-standalone inputImage.png -x 750 -y 250 -o ultrawide.png
