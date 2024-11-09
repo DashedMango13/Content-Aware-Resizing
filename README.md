@@ -1,6 +1,8 @@
 # caResize
 A Content Aware Resizing Algorithm By David Oluwagbemi, March 2023
 
+Supports .JPEG, .PNG, .TIFF, etc.
+
 Here is a link to the project documentation:
 
 [View the PDF documentation](Content_Aware_Resizing.pdf)
