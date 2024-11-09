@@ -3,7 +3,7 @@ A Content Aware Resizing Algorithm By David Oluwagbemi, March 2023
 
 Here is a link to the project documentation:
 
-[View the PDF documentation](Convolutional_Neural_Networks_For_Handwritten_Digit_Recognition.pdf)
+[View the PDF documentation](Content_Aware_Resizing.pdf)
 
 Based On:
 Seam Carving for Content-Aware Image Resizing
