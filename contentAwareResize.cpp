@@ -124,13 +124,13 @@ namespace ipcv {
 	bool seamInsertion(const cv::Mat& dstTemp, cv::Mat& dst, const cv::Mat& map, int seamNum, cv::Mat& energyHist) {
 		int n = seamNum;
 		cv::Point min;
-
+		
 		cv::Mat dstTempUltra(dstTemp.rows, dstTemp.cols + 1, CV_8UC4, cv::Scalar::all(0));
 		cv::Mat mapUltra(map.rows, map.cols + 1, CV_32F, cv::Scalar::all(0));
-		
+
 		energyHist.copyTo(mapUltra(cv::Rect(0, 0, energyHist.cols, energyHist.rows)));
 		dstTemp.copyTo(dstTempUltra(cv::Rect(0, 0, dstTemp.cols, dstTemp.rows)));
-
+		
 		//Seam Insertion
 		for (int r = 0; r < map.rows - 1; r++) {
 			cv::Mat nBor;
@@ -258,6 +258,7 @@ namespace ipcv {
 			cv::minMaxLoc(sumsH, &minH, NULL, &minIdx, NULL);
 			seamNumH = minIdx.x;
 
+
 			//Seam Removal
 			if ((minH < minV && dst.rows > h) || (dst.rows > h && dstTemp.cols == w)) {
 				cv::rotate(dstTemp, dstTemp, cv::ROTATE_90_COUNTERCLOCKWISE);
@@ -277,8 +278,9 @@ namespace ipcv {
 				seamRemovalE(energyHist, energyHist, map, n); //Update Energy History
 			}
 			
+
 			//Seam Insertion
-			if ((minH < minV && dst.rows < h) || (dst.rows < h && dst.cols == w)) {
+			else if ((minH < minV && dst.rows < h) || (dst.rows < h && dst.cols == w)) {
 				//Avoid Selection of same seams
 				for (uint32_t j = 0; j < numSeams; j++) {
 					cv::minMaxLoc(sumsH, &minH, NULL, &minIdx, NULL);
@@ -308,6 +310,7 @@ namespace ipcv {
 				int m = seamNumV;
 				cout << "Seam inserted at column " << m << endl;
 				seamInsertion(dstTemp, dst, map, m, energyHist);
+				cout << "y" << endl;
 			}
 			
 			numSeams++;
