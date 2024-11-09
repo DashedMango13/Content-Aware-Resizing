@@ -71,9 +71,65 @@ No dependencies are required to run the fully functional standalone executable
 9. Use '-o' to save your output.
     ```bash
    caResize inputImage.png -x 750 -y 250 -o ultrawide.png
+<p align="center">
+  <table>
+    <tr>
+      <th>Input Image (Ultra-Wide)</th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/b7722594-ce54-4032-abac-2e852d5524d0" height="250"></td>
+    </tr>
+  </table>
+</p>
+![erased](https://github.com/user-attachments/assets/c1b6aa7c-ab57-4f83-bd87-9a2db24fd037)
+
+
+
 9. Use '-r' to remove a part of the image and maintain original size. Can use '-R' instead of '-r' to ignore original size.
    ```bash
    caResize inputImage.png -r
+
+<p align="center">
+  <table>
+    <tr>
+      <th>Input Image </th>
+      <th>Removal Selection</th>
+      <th>Output Image</th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/29cacbc9-751e-4631-baa3-9cd86bb2cf9d" height="200"></td>
+      <td><img src="https://github.com/user-attachments/assets/c85e69ef-2436-414e-8d5b-75bccf593827" height="200"></td>
+      <td><img src="https://github.com/user-attachments/assets/c1b6aa7c-ab57-4f83-bd87-9a2db24fd037" height="200"></td>
+    </tr>
+  </table>
+</p>
+
 11. Use '-k' sparingly to outline an area of the image that should remain unchanged when necessary.
     ```bash
-    caResize inputImage.png -x 750 -y 250 -o ultrawide.png
+    caResize inputImage.png -x 400 -k -o output.jpg
+
+<p align="center">
+  <table>
+    <tr>
+      <th>Input Image </th>
+      <th>Shrink (Without Keep)</th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/e7dd8bf7-0794-4568-924e-42ea9e965b87" height="370"></td>
+      <td><img src="https://github.com/user-attachments/assets/bc3c4d26-d96e-4715-8428-e2dbae7d697c" height="370"></td>
+    </tr>
+  </table>
+</p>
+
+<p align="center">
+  <table>
+    <tr>
+      <th>Keep </th>
+      <th>Shrink (With Keep Selection)</th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/4da30257-c9d2-4d74-b7a7-0a2044319961" height="350"></td>
+      <td><img src="https://github.com/user-attachments/assets/0cb136cf-dc7d-4c04-8636-b4d7e91ef92c" height="350"></td>
+    </tr>
+  </table>
+</p>\
