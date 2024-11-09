@@ -1,6 +1,10 @@
 # caResize
 A Content Aware Resizing Algorithm By David Oluwagbemi, March 2023
 
+Here is a link to the project documentation:
+
+[View the PDF documentation](Convolutional_Neural_Networks_For_Handwritten_Digit_Recognition.pdf)
+
 Based On:
 Seam Carving for Content-Aware Image Resizing
 ACM Transactions on Graphics, Vol. 26, No. 3, Article 10, Publication date: July 2007.
@@ -132,4 +136,4 @@ No dependencies are required to run the fully functional standalone executable
       <td><img src="https://github.com/user-attachments/assets/0cb136cf-dc7d-4c04-8636-b4d7e91ef92c" height="350"></td>
     </tr>
   </table>
-</p>\
+</p>
