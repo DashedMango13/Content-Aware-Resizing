@@ -40,28 +40,40 @@ OpenCV 4.10.0
 
 # Application Usage (Windows)
 No dependencies are required to run the fully functional standalone executable
-1. Download caResize-standalone.zip.
-2. Extract caResize-standalone.exe.
-3. Add the file path containing "caResize-standalone.exe" to the system environment PATH variables.
+1. Download "caResize-standalone.zip".
+2. Extract "caResize.exe".
+3. Add the file path containing "caResize.exe" to the system environment PATH variables.
 4. Navigate to the folder containing the images you would like to modify in File Explorer.
 5. Type 'cmd' into to directory and press eneter to launch the command propmpt from that path.
-6. .  Run "caResize-standalone" "-h" to see options.
+6. .  Run "caResize.exe" with "-h" to see the options. You can copy-paste the line below into command prompt.
    ```bash
-    caResize-standalone -h
-7. Run "caResize-standalone" and pass your image as an argument with "-v" to understand the images original properties. '-i' does not need to be written to input the image, it is default.
+    caResize -h
+7. Run "caResize.exe" and pass your image as an argument with verbose,"-v", to understand the images original properties. '-i' does not need to be written to input the image, it is default.
    ```bash
-   caResize-standalone inputImage.png -v
- ![inputImage](https://github.com/user-attachments/assets/d9b45ae2-6989-4997-ac5b-f59bfcd10727)
+   caResize inputImage.png -v
+
+<p align="center">
+  <table>
+    <tr>
+      <th>Input Image</th>
+      <th>Verbose Info</th>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/d9b45ae2-6989-4997-ac5b-f59bfcd10727" height="250"></td>
+      <td><img src="https://github.com/user-attachments/assets/b0428a56-b10a-45e1-b079-705f4fed88e8" height="250"></td>
+    </tr>
+  </table>
+</p>
 
 8. Use '-x' and '-y' to achieve a target width and height for your image.
    ```bash
-   caResize-standalone inputImage.png -x 750 -y 250
+   caResize inputImage.png -x 750 -y 250
 9. Use '-o' to save your output.
     ```bash
-   caResize-standalone inputImage.png -x 750 -y 250 -o ultrawide.png
+   caResize inputImage.png -x 750 -y 250 -o ultrawide.png
 9. Use '-r' to remove a part of the image and maintain original size. Can use '-R' instead of '-r' to ignore original size.
    ```bash
-   caResize-standalone inputImage.png -r
+   caResize inputImage.png -r
 11. Use '-k' sparingly to outline an area of the image that should remain unchanged when necessary.
     ```bash
-    caResize-standalone inputImage.png -x 750 -y 250 -o ultrawide.png
+    caResize inputImage.png -x 750 -y 250 -o ultrawide.png
