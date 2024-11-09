@@ -37,3 +37,18 @@ OpenCV 4.10.0
                                     
   -y [ --tgt-height ] arg           target height [can be used with k to change
                                     results]
+
+#Application Usage (Windows)
+No dependencies are required to run the fully functional standalone executable
+1. Download caResize-standalone.zip
+2. Extract caResize-standalone.exe
+3. Add the file path containing "caResize-standalone.exe" to the system environment PATH variables.
+4. Navigate to the folder containing the images you would like to modify in File Explorer
+5. Type 'cmd' into to directory and press eneter to launch the command propmpt from that path
+7.  Run "caResize-standalone" "-h" to see options
+   ```bash
+    caResize-standalone -h.
+7. Run "caResize-standalone" and pass your image as an argument with "-v" to understand the images original properties
+   ```bash
+   caResize-standalone inputImage.jpg -v
+8. Use '-x' and '-y' to achieve a target size
