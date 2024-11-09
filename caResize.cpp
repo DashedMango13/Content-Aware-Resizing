@@ -189,12 +189,20 @@ int main(int argc, char* argv[]) {
             << " [s]" << endl;
         cout << "Size: " << dst.size() << endl;
     }
-    
+
+    //100% ALPHA CHANNEL for image formats with transparency
+    for (int r = 0; r < dst.rows; r++) {
+        for (int c = 0; c < dst.cols; c++) {
+            dst.at<cv::Vec4b>(r, c)[3] = 255;
+        }
+    }
+
     if (dst_filename.empty()) {
         cv::imshow(src_filename, src);
         cv::imshow(src_filename + " [caResize]", dst);
         cv::waitKey(0);
     }
+
     else {
         cv::imwrite(dst_filename, dst);
     }

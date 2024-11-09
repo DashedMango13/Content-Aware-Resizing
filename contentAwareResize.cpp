@@ -310,7 +310,6 @@ namespace ipcv {
 				int m = seamNumV;
 				cout << "Seam inserted at column " << m << endl;
 				seamInsertion(dstTemp, dst, map, m, energyHist);
-				cout << "y" << endl;
 			}
 			
 			numSeams++;
